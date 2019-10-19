@@ -1,0 +1,864 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb"><head>
+ 
+ 
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="description" content="UGC approved , ugc and iisn approved, Journal of Emerging Technologies and Innovative Research is not limited to a specific field of engineering but is instead devoted to a wide range of subfields in the engineering sciences." />
+  <title>IJDTS - International Journal of Developments in Technology and Science ( ISSN approved )</title>
+  
+
+<meta name="document-type" content="Public" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
+
+  
+  <meta name="description" content="Journal of Emerging Technologies and Innovative Research is not limited to a specific field of engineering but is instead devoted to a wide range of subfields in the engineering sciences." />
+  <title>ijdts - International Journal of Developments in Technology and Science </title>
+
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
+<link href="css/main1.css" rel="stylesheet" type="text/css" />
+<link href="css/hover.css" rel="stylesheet" type="text/css" />
+<link href="css/default.css" rel="stylesheet" type="text/css" />
+
+
+
+<!-- STYLE AND JS FOR IMAGE SLIDER for Indexing Startss Here -->
+<script type="text/javascript" language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+<style>
+.feedback {
+   position: fixed;
+   right: 0;
+   bottom: 34%;
+   height: 65px;
+   width: 120px;
+
+   background-color: #55E;
+   color: #FFF;
+}
+
+.feedback:hover {
+    width: 300px;
+}
+
+
+</style>
+<!--Start of Search Script-->
+<script type="text/javascript">
+
+$(function(){
+
+$("#searchid").keyup(function() 
+
+{ 
+
+
+
+var searchid = $(this).val();
+
+var dataString = 'search='+ searchid;
+
+if(searchid!='')
+
+{
+
+    $.ajax({
+
+    type: "POST",
+
+    url: "searchPaper.php",
+
+    data: dataString,
+
+    cache: false,
+
+    success: function(html)
+
+    {
+
+    $("#result").html(html).show();
+
+    }
+
+    });
+
+}
+
+else{
+
+	jQuery("#result").fadeOut();
+
+	return false;    
+
+}
+
+});
+
+
+
+jQuery("#result").click(function(e){ 
+
+    var $clicked = $(e.target);
+
+    var $name = $clicked.find('.name').html();
+
+    var decoded = $("<div/>").html($name).text();
+
+    $('#searchid').val(decoded);
+
+});
+
+jQuery(document).click(function(e) {
+
+    var $clicked = $(e.target);
+
+    if (! $clicked.hasClass("search")){
+
+    jQuery("#result").fadeOut(); 
+
+    }
+
+});
+
+$('#searchid').click(function(){
+
+    jQuery("#result").fadeIn();
+
+});
+
+});
+
+</script>
+<!--Start of end Search Script-->
+
+<script type="text/javascript" language="javascript">
+			$(function() {
+
+				//	Basic carousel, no options
+				$('#foo0').carouFredSel();
+
+				//	Basic carousel + timer, using CSS-transitions
+				$('#foo1').carouFredSel({
+					auto: {
+						pauseOnHover: 'resume',
+						progress: '#timer1'
+					}
+				}, {
+					transition: true
+				});
+
+				//	Scrolled by user interaction
+				$('#foo2').carouFredSel({
+					auto: false,
+					prev: '#prev2',
+					next: '#next2',
+					pagination: "#pager2",
+					mousewheel: true,
+					swipe: {
+						onMouse: true,
+						onTouch: true
+					}
+				});
+
+				//	Variable number of visible items with variable sizes
+				$('#foo3').carouFredSel({
+					width: 360,
+					height: 'auto',
+					prev: '#prev3',
+					next: '#next3',
+					auto: false
+				});
+
+				//	Responsive layout, resizing the items
+				$('#foo4').carouFredSel({
+					responsive: true,
+					width: '100%',
+					scroll: 2,
+					items: {
+						width: 400,
+					//	height: '30%',	//	optionally resize item-height
+						visible: {
+							min: 2,
+							max: 6
+						}
+					}
+				});
+
+				//	Fuild layout, centering the items
+				$('#foo5').carouFredSel({
+					width: '100%',
+					scroll: 2
+				});
+
+			});
+		</script>
+
+		<style type="text/css" media="all">
+			.list_carousel {
+						width: 922px;
+			}
+			.list_carousel ul {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				display: block;
+			}
+			.list_carousel li {
+				font-size: 40px;
+				color: #999;
+				text-align: center;
+				border: 1px solid #999;
+				width: 100px;
+				height: 50px;
+				padding: 0;
+				margin: 6px;
+				display: block;
+				float: left;
+			}
+			.list_carousel.responsive {
+				width: auto;
+				margin-left: 0;
+			}
+			.clearfix {
+				float: none;
+				clear: both;
+			}
+			.prev {
+				float: left;
+				margin-left: 10px;
+			}
+			.next {
+				float: right;
+				margin-right: 10px;
+			}
+			.pager {
+				float: left;
+				width: 300px;
+				text-align: center;
+			}
+			.pager a {
+				margin: 0 5px;
+				text-decoration: none;
+			}
+			.pager a.selected {
+				text-decoration: underline;
+			}
+			.timer {
+				background-color: #999;
+				height: 6px;
+				width: 0px;
+			}
+		</style>
+		
+<!--  STYLE AND JS FOR IMAGE SLIDER for Indexing Ends Here -->		
+		
+    </Meta>
+</head>
+
+<!-- DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" -->
+
+<body>
+<div id="wrapper">
+<div id="wrapper_header">
+  <div class="header_top">
+    <div class="container"> 
+      
+
+      
+      <!-- Login Div Start -->
+      
+      <form id="signInHeader"  name="signin" method="post" action="">
+        
+        <!-- Login Start -->
+        
+        <div class="login">
+          <div class="form_wrap">
+                        <input type="button" id="submitpaper" value="Call for Paper" class="submit_btn2" href="call-for-paper.html" />
+			<input type="button" id="submitpaper" value="Publication Process" class="submit_btn2" href="publication-guidelines.html" />
+			<input type="button" id="submitpaper" value="Submit Paper Online" class="submit_btn2" href="publication-guidelines.html" />
+		    <input type="button" id="submitpaper" value="Join Us" class="submit_btn2" href="joinus.html" />
+            
+			          </div>
+        </div>
+        <!-- Login Ends -->
+           </form>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="header_bottom">
+      <div class="logo"><a href="http://ijdts.com"><img src="image/1.png" alt="" width="110px" height="110px" /></a></div>
+        <div class="logo" style="text-height: text-size; width:800; height: 110px; font-size: 24px; line-height: 1; vertical-align: bottom; margin-bottom: 0; font-family: 'GungsuhChe';"><strong>International Journal of Developments in Technology and Science  <span style="font-size:10px; color:#00000; vertical-align:central;"></br></strong></br><center>(  ISSN Approved & An International Open Access Journal  )</br></center><center> ISSN: 2581-9119 </center> </span></a></strong>  
+        
+        
+        <div class="search_job">
+         <script async src="https://cse.google.com/cse.js?cx=002082994362708172829:_-baqgmzp3e"></script>
+<div class="gcse-search"></div>
+    </div> </div>
+     
+      <div class="clear"></div>
+    </div><br/>
+    <div align="center">       
+</br><br/>
+      <ul id="css3menu1" class="topmenu" >
+        <li class="topfirst"><a href="http://ijdts.com/" style="width:70px;height:8px;line-height:9px; text-align:center;">Home</a></li>
+        <li class="topmenu"><a  style="width:120px;height:8px;line-height:9px; text-align:center;">Editorial / RMS &#9660;</a>
+		<ul>  
+		<li class="topmenu"><a href="editorialboard.html" style="width:120px;height:8px;line-height:9px; text-align:center;">Reviewer Board</a>
+		<li class="topmenu"><a href="joinus.html" style="width:120px;height:8px;line-height:9px; text-align:center;">Join AS Reviewer</a>
+
+		 </ul>  
+          
+        </li>
+        <li class="topmenu"><a href="call-for-paper.html" style="width:85px;height:8px;line-height:9px; text-align:center;">Call For Paper</a> </li>
+        <li class="topmenu"><a href="disclaimer.html" style="width:90px;height:8px;line-height:9px; text-align:center;">Research Areas</a></li>
+        <!-- PHP Script to load automatic current Issue-->
+        
+        <li class="#"><a  style="width:85px;height:8px;line-height:9px; text-align:center;">For Author &#9660;</a>
+          <ul>  
+                <li class="#"><a href="publication-guidelines.html" style="width:120px;height:8px;line-height:9px; text-align:left;">Publication Guidelines</a></li>
+           <li><a href="file/IJDTSPaperFormat.docx" style="width:120px;height:8px;line-height:9px; text-align:left;">Sample Paper Format</a></li>
+            <li><a href="publication-guidelines.html" style="width:120px;height:8px;line-height:9px; text-align:left;">Submit Paper Online</a></li>
+            <li><a href="processing-charges.html"  style="width:120px;height:8px;line-height:9px; text-align:left;">Processing Charges</a></li>
+			<li><a href="others.html"  style="width:120px;height:8px;line-height:9px; text-align:left;">Hard Copy and DOI </a></li>   </ul>
+        </li>
+        <li class="topmenu"><a href="#" style="width:85px;height:8px;line-height:9px; text-align:center;">Current Issue</a></li>
+        <li class="topmenu"><a  style="width:85px;height:8px;line-height:9px; text-align:center;">Archives &#9660;</a>
+          <ul>
+            <li><a href="current" style="width:100px;height:8px;line-height:9px; text-align:left;">Current Issue</a>
+            </li>
+        
+            <li><a href="past-issues" style="width:100px;height:8px;line-height:9px; text-align:left;">Past Issues</a>
+            </li>
+            <li><a href="special-issue" style="width:100px;height:8px;line-height:9px; text-align:left;">Special Issues</a></li>
+          </ul>
+        </li>
+        <li class="topmenu"><a href="FAQ.html" style="width:60px;height:8px;line-height:9px; text-align:center;">FAQs</a></li>
+        <li class="toplast"><a href="contact.html" style="width:85px;height:8px;line-height:9px; text-align:center;">Contact Us</a></li>
+      </ul>
+    </div>
+    
+    <!-- Navigation Start --> 
+    
+  </div>
+</div>
+
+<!-- Header Ends -->
+
+<!-- body Statrts -->
+
+  <div id="wrapper_body">
+    <div class="container">
+      <div class="container_body"> 
+	  
+
+
+<div style="font-size:18px;font-weight:bold;text-decoration:none;color:#311b92" class="content">
+<hr/>
+<marquee direction="left" loop="true" scrollamount="5" onmouseover="this.stop();" onmouseout="this.start();">
+
+<strong>Submit Paper : http://www.ijdts.org/submit-paper </strong>
+
+|
+<strong>Call for Paper </strong>
+|
+<a href="past-issues" style="font-size:18px;font-weight:bold;text-decoration:none;color:#003366">
+<strong>Recent Published Issue: </strong>Click Here to visit.
+</a>
+|
+<strong>Recent Published Issue: </strong>Click Here to visit.
+|
+<strong>Call for Paper </strong>
+|
+<a href="call-for-paper" style="font-size:18px;font-weight:bold;text-decoration:none;color:#003366">
+<strong>Call for Paper</strong>
+</a>
+|
+<strong>Submit Paper : http://www.ijdts.com/submit-paper </strong>
+|
+<strong><strong>Recent Published Issue: </strong>Click Here to visit. </strong>
+|
+<a href="call-for-paper" style="font-size:18px;font-weight:bold;text-decoration:none;color:#003366">
+<strong>Call for Paper</strong>
+</a>
+|
+<strong>Submit Paper : http://www.ijdts.com/submit-paper </strong>
+|
+<a href="submit-paper" style="font-size:18px;font-weight:bold;text-decoration:none;color:#003366">
+<strong>Submit Your Paper Online</strong>
+</a>
+|
+<strong><strong>Recent Published Issue: </strong>Click Here to visit. </strong>
+|
+<strong>Submit Paper : http://www.ijdts.com/submit-paper </strong>
+|
+<a href="processing-charges" style="font-size:18px;font-weight:bold;text-decoration:none;color:#003366">
+<strong>Publication Charges</strong>
+</a>
+|
+<strong>Submit Paper : http://www./submit-paper </strong>
+|
+<strong><strong>Recent Published Issue: </strong>Click Here to visit. </strong>
+|
+<a href="call-for-paper" style="font-size:18px;font-weight:bold;text-decoration:none;color:#003366">
+<strong>Call for Paper</strong>
+</a>
+</marquee>
+<hr/>
+</div>
+
+<div class="body_left_col"><style>
+ull {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ 
+lil {
+  font: 18px ;
+  border-bottom: 1px solid #ccc;
+}
+ 
+lil:last-child {
+  border: none;
+}
+ 
+lil a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+   
+  -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+  transition: font-size 0.3s ease, background-color 0.3s ease;
+ }
+ 
+lil a:hover {
+  font-size: 25px;
+  background: #f6f6f6;
+}
+</style>
+	  
+	  <!-- TOP NEWS BAR START-->
+
+  	  <!-- TOP NEWS BAR STOP-->	  
+
+
+<div class="content_column"> 
+  <!-- Left Navigation Start -->
+ 
+  
+  
+
+  <div style="padding: 4px 0 0 0;">
+  <div class="left_box" align="center">
+    <h3>For Authors</h3>
+    <div class="content" align="left" >
+	<ul>
+<lil><a href="publication-guidelines.html">Instructions to the authors<br/></a></lil><hr/>
+<lil><a href="publication-guidelines.html">Submit your paper online</a></lil><hr/>
+<lil><a href="others.html">Plagiarism Policy</a></lil><hr/>
+<lil><a href="processing-charges.html">Publication FEE</a><hr/>
+<lil><a href="researchareas.html">Areas Covered</a></lil><hr/>
+        </lil>
+</ul>
+</div>
+  </div>
+</div>
+
+ <div style="padding: 4px 0 0 0;">
+  <div class="left_box" align="center">
+    <h3>Download</h3>
+    <div class="content" align="left" >
+	<ull>
+<lil><a href="file/IJDTSPaperFormat.docx">Paper format<br/></a></lil><hr/>
+<lil><a href="file/IJDTSPaperFormat.docx">Copy Right Form</a></lil><hr/>
+<lil><a href="file/Wavier-Policy-Copy.pdf">Fee Waiver</a></lil><hr/>
+</ul>
+</div>
+  </div>
+</div>
+
+ 
+
+ <div style="padding: 1px ;">
+  <div class="left_box" align="center">
+    <h3>Contact Us</h3>
+    <div class="content" align="left" >
+	<ull>
+<lil><a href="contact.html">Contact Us<br/></a></lil>
+</ul>
+</div>
+  </div>
+</div>
+
+<div style="padding: 1px 0 0 0;">
+
+</div>
+</div>
+<br/>
+
+</div>
+<style>
+.texttitle{
+	font:Gotham, "calibri", Helvetica, Arial, sans-serif;
+	font-size:16px;
+	text-align:left;
+	padding:15px 0px 10px 0px;
+	color: #07628E;
+	font-weight:bold;
+}
+.journaldetails{
+	font:Gotham, "calibri", Helvetica, Arial, sans-serif;
+	font-size:15px;
+	text-align:left;
+	vertical-align:top;
+	line-height:25px;
+}
+.pagemainheading{
+	font:Gotham, "calibri", Helvetica, Arial, sans-serif;
+	font-size:18px;
+	padding:15px 0px 10px 0px;
+	color: #07628E;
+	font-weight:bold;
+	text-align:center !important;
+	border-bottom:2px solid;
+}
+ul li{
+ font-size:15px;
+ ul.circle {list-style-type: circle;}
+}
+</style>
+<!--      CONTENT STARTS              -->
+
+
+          
+
+<div class="body_mid_col">
+<h1 class="page_title" >DISCLAIMER</h1>
+<div style="margin:5px 5px 5px 5px;">
+<hr width="90%"/><h3>Warranties and Liability</h3>
+    <p>IJDTS journal makes every effort to ensure the accuracy of all the information (the “Content”) contained in its publications. However, the IJDTS journal and it’s members make no representations or warranties whatsoever as to the accuracy, completeness or suitability for any purpose of the Content and disclaim all such representations and warranties whether express or implied to the maximum extent permitted by law. While the content of this site is provided in good faith, we do not warrant that the information will be kept up to date, be true and not misleading, or that this site will always (or ever) be available for use.<br/> Any views expressed in this publication are the views of the authors and are not necessarily the views of the Editor/reviewer.<br/>
+The appearance of advertisements in the journal is not a warranty, endorsement, or approval of the products or services advertised or of their effectiveness, quality or safety.<br/> The publisher and the editor(s) disclaim responsibility for any injury to persons or property resulting from any ideas, methods, instructions or products referred to in the content or advertisements.</p>
+    
+<hr width="90%"/><h3>Links to other websites</h3>
+    <p>IJDTS journal may contain Links to other websites operated by other parties. The links are provided purely for educational purposes. We are unable to provide any warranty regarding the accuracy or completeness of the content of such sites, or the reliability, quality or effectiveness provided through external websites. Such links do not imply endorsement of the material of any other site and IJDTS journal disclaims all liability with regard to your access to such linked websites.</p>
+    
+<hr width="90%"/><h3>Copyright</h3>
+    <p>Scientific publications appearing in IJDTS journal have been rigorously refereed, carefully quality-improved, and professionally selected by our editorial staff. These publications and all parts thereof are therefore protected by copyright. This covers the exclusive rights of the publisher to sell, to reproduce (by any means, including photographic or electronic), to distribute (including via photocopies, reprints, or electronic means), and to store (on microfilm, in electronic data bases, on video disks, etc.) this material. The acceptance regulations of a manuscript for publication automatically include the consent of the author(s) to transfer the copyright to the IJDTS journal. Permission for exceptions to these rules must be obtained in writing from the IJDTS journal at the time of manuscript submission. Photocopies may be made for personal or in-house use beyond the limitations stipulated under Copyright Law.</p>
+    
+<hr width="90%"/><h3>Law and Jurisdiction</h3>
+    <p>These Terms of Use are governed by the substantive laws of India. You, the user agree to submit to the jurisdiction of the courts situated in India with respect to any dispute, disagreement, or cause of action related to or involving this Website. If any provision is found to be invalid by any court having competent jurisdiction, the invalidity of such provision shall not affect the validity of the remaining provisions of these Terms of Use, which shall remain in full force and effect. No waiver of any of these Terms of Use shall be deemed a further or continuing waiver of such term or any other term.</p>
+    
+
+<hr width="90%"/><h3>Variations</h3>
+    <p>IJDTS journal reserves the right, at its sole discretion, to change the terms and conditions of this agreement from time to time and access of IJDTS journal or its website will be deemed to your acceptance of an agreement to any changed terms and conditions.</p>
+</div>                 
+
+          
+          
+          
+
+<!--      CONTENT ENDS              -->
+</div>
+<div class="body_right_col">
+  <style>
+.myButton {
+	-moz-box-shadow: 0px 1px 0px 0px #f0f7fa;
+	-webkit-box-shadow: 0px 1px 0px 0px #f0f7fa;
+	box-shadow: 0px 1px 0px 0px #f0f7fa;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #33bdef), color-stop(1, #019ad2));
+	background:-moz-linear-gradient(top, #33bdef 5%, #019ad2 100%);
+	background:-webkit-linear-gradient(top, #33bdef 5%, #019ad2 100%);
+	background:-o-linear-gradient(top, #33bdef 5%, #019ad2 100%);
+	background:-ms-linear-gradient(top, #33bdef 5%, #019ad2 100%);
+	background:linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#33bdef', endColorstr='#019ad2',GradientType=0);
+	background-color:#FF6600;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #057fd0;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:#FF6600;
+}
+.myButton:hover {
+	background: #FFFFFF;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+</style>
+
+<div class="content_column"> 
+   <div class="left_box" align="center">
+    <h3 >ISSN Number</h3>
+    <div class="content" align="center">
+<img src="image/issn.jpg" width="160" height="70" />
+<img src="image/barcode.gif" style="width:160;height:70;" />
+
+    </div>
+    </div> </div>
+	
+    
+	
+	
+    
+ <div class="content_column"> 
+   
+    
+
+    
+<div style="padding: 4px 0 0 0;">    
+  <div class="left_box" align="center">
+    <h3>Archives</h3>
+    <div class="content" align="center">
+<script language="javascript"> 
+<!--
+var state = 'none';
+
+function showhide(layer_ref) {
+
+if (state == 'block') { 
+state = 'none'; 
+} 
+else { 
+state = 'block'; 
+} 
+if (document.all) { //IS IE 4 or 5 (or 6 beta) 
+eval( "document.all." + layer_ref + ".style.display = state"); 
+} 
+if (document.layers) { //IS NETSCAPE 4 or below 
+document.layers[layer_ref].display = state; 
+} 
+if (document.getElementById &&!document.all) { 
+hza = document.getElementById(layer_ref); 
+hza.style.display = state; 
+} 
+} 
+</script> 
+<ul style="line-height:20px">
+
+<li >
+<div ><a href="javascript:void(0);" style="text-decoration:none;" onclick="showhide('div2');" >Volume 1 | 2019</a></div>
+<div class="divclass" id="div2" style="display: none;"> 
+<ul class="left_links">   
+<li style="padding: .1em 1em;"><a href="archive?v=1&i=1" style="text-decoration:none;">» Issue 1</a></li>
+<li style="padding: .1em 1em;"><a href="archive?v=1&i=2" style="text-decoration:none;">» Issue 2</a></li>
+<li style="padding: .2em 1em;"><a href="archive?v=1&i=3" style="text-decoration:none;">» Issue 3</a></li>
+<li style="padding: .2em 1em;"><a href="archive?v=1&i=4" style="text-decoration:none;">» Issue 4</a></li>
+<li style="padding: .2em 1em;"><a href="archive?v=1&i=5" style="text-decoration:none;">» Issue 5</a></li>
+<li style="padding: .2em 1em;"><a href="archive?v=1&i=6" style="text-decoration:none;">» Issue 6</a></li>
+<li style="padding: .2em 1em;"><a href="archive?v=1&i=7" style="text-decoration:none;">» Issue 7</a></li>
+
+</ul>  
+</div>
+
+</li>
+
+<li>
+<div ><a href="javascript:void(0);" style="text-decoration:none;" onclick="showhide('div1');">Volume 2 | 2019</a></div>
+<div class="divclass" id="div1" style="display: none;"> 
+<ul class="left_links">  
+<li style="padding: .2em 1em;"><a href="archive?v=2&i=1" style="text-decoration:none;">» Issue 1</a></li>
+<li style="padding: .2em 1em;"><a href="archive?v=2&i=2" style="text-decoration:none;">» Issue 2</a></li>
+<li style="padding: .2em 1em;"><a href="archive?v=2&i=3" style="text-decoration:none;">» Issue 3</a></li>
+<li style="padding: .2em 1em;"><a href="archive?v=2&i=4" style="text-decoration:none;">» Issue 4</a></li>
+<li style="padding: .2em 1em;"><a href="archive?v=2&i=5" style="text-decoration:none;">» Issue 5</a></li>
+<li style="padding: .2em 1em;"><a href="archive?v=2&i=6" style="text-decoration:none;">» Issue 6</a></li>
+<li style="padding: .2em 1em;"><a href="archive?v=2&i=7" style="text-decoration:none;">» Issue 7</a></li>
+<li style="padding: .2em 1em;"><a href="archive?v=2&i=8" style="text-decoration:none;">» Issue 8</a></li>
+<li style="padding: .2em 1em;"><a href="archive?v=2&i=9" style="text-decoration:none;">» Issue 9</a></li>
+<li style="padding: .2em 1em;"><a href="archive?v=2&i=10" style="text-decoration:none;">» Issue 10</a></li>
+<li style="padding: .2em 1em;"><a href="archive?v=2&i=11" style="text-decoration:none;">» Issue 11</a></li>
+<li style="padding: .2em 1em;"><a href="archive?v=2&i=12" style="text-decoration:none;">» Issue 12</a></li>
+</ul>  
+</div>
+</li>
+
+
+</ul>
+    </div>
+  </div>
+</div>
+    
+   <div class="content_column"> 
+   <div class="left_box" align="center">
+  <a href="#">  <h3 >Impact Factor</a></h3>
+    <div class="content" align="center">
+<br/><h1 style="font-size:15px; color:#F00803;"><a href="#"> Impact Factor: TBD</a></h1>
+    </div>
+    </div> </div>
+  <div style="padding: 3px 0 0 0;">
+  <div class="left_box" align="center">
+    <h3>Visitor Counter</h3>
+    <div class="content" style="pointer-events: none;">
+<!-- BEGIN: Powered by Supercounters.com -->
+<center><script type="text/javascript" src="//widget.supercounters.com/ssl/flag.js"></script><script type="text/javascript">sc_flag(1542461,"ffffff","000000","beccbe",2,10,0,0)</script><br><noscript><a href="http://www.supercounters.com/">Free online Counter</a></noscript>
+</center>
+<!-- END: Powered by Supercounters.com -->
+
+</div>
+  </div>
+</div>
+    
+    <div style="padding: 4px 0 0 0;">
+  
+</div>  
+  
+    
+  
+  
+<div style="padding: 4px 0 0 0;">
+  
+	</div>
+
+
+
+
+
+</div>
+  <!-- Left Navigation Ends -->
+</div>
+ <div class="clear"></div>
+            </div>
+            <div class="gap30"></div>
+    <!-- Body Ends --> 
+</div>    
+  </div>
+  </div>
+  <!-- Footer Start -->
+  
+  <div id="wrapper_footer">
+  <div class="footer_top">
+    <div class="body_bottom"></div>
+    <div class="container">
+      <div class="content"> 
+        
+        <!-- About Us Start --><!-- About Us Ends --> 
+        
+        <!-- Testimonial Start --><!-- Testimonial Ends -->
+        
+        <div class="clear"></div>
+      </div>
+     <!-- <div class="footer_divider"></div> -->
+      <div class="content">
+    <table width="922" cellpadding="3">
+    <tr>
+    <td width="209" valign="top">
+          <p style="color:#FFFFFF"><strong>For Authors: </strong></p>
+          <ul class="footer_links">
+            <li>- <a href="file/IJDTSPaperFormat.docx" target="_blank">Sample Paper Format</a></li>
+			<li>- <a href="publication-guidelines.html">Submit Paper Online</a></li>
+			<li>- <a href="call-for-paper.html">Call For Paper</a></li>
+            <li>- <a href="file/Copy-Right-Form-Copy.pdf">Copyright Form</a></li>
+			<li>- <a href="FAQ.html">FAQ</a></li>
+           </ul>
+     </td>
+     <td width="189" valign="top">
+            <p style="color:#FFFFFF"><strong>Publications </strong></p>
+          <ul class="footer_links">
+            <li>- <a href="#">Current Issue</a> </li>
+            <li>- <a href="#">Past Issue</a> </li>
+            <li>- <a href="#">Special Issues </a></li>
+           </ul>
+</td><td width="223" valign="top">
+           <p style="color:#FFFFFF"><strong>Proposals: </strong></p>
+          <ul class="footer_links">
+            <li>- <a href="joinus.html">Join as Reviewer</a></li>
+			 <li>- <a href="#">Conference Proposal</a></li>
+			 <li>- <a href="editorialboard.html">Editorial Board</a></li>
+			 <li>- <a href="joinus.html">Join as IJEDR Team</a></li>
+            <li>- <a href="joinus.html">Join as Volunteer</a></li>
+        </ul>
+</td>
+<td width="418" align="left" valign="top">
+ <p style="color:#FFFFFF"><strong>Policies: </strong></p>
+  <ul class="footer_links">
+    <li>- <a href="disclaimer.html">Article Correction Policy</a></li>
+            <li>- <a href="disclaimer.html">Copyright Infringement Claims</a></li>
+            <li>-	 <a href="others.html">Terms &amp; Conditions</a></li>
+            <li> - <a href="disclaimer.html">Privacy Policy</a></li>
+            <li> - <a href="redundpolicy.html">Refund Policy</a> </li>
+            <li>- <a href="disclaimer.html">Disclaimer</a> </li>
+        </ul>
+</td></tr></table>
+        <div class="clear"></div>
+      </div>
+      <div class="footer_divider"></div>
+      <div class="content">
+        <div class="footer_links2">
+          <ul>
+            <li><a href="index.php">Home</a> |</li>
+            <li><a href="others.html">Terms &amp; Conditions</a> |</li>
+            <li><a href="others.html">Privacy Policy</a> |</li>
+            <li><a href="redundpolicy.html">Refund Policy</a> |</li>
+            <li><a href="disclaimer.html">Disclaimer</a><a href="#"> |</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <!-- Social Icons Start -->
+        
+        <div class="social_icons">
+          <ul>
+            <li class="padding_top5">Follow Us :</li>
+            <li><a href="#" target="_blank" > <img src="image/social/fb.png" height="45" width="45"   /> </a></li>
+            <li><a href="#"> <img src="image/social/tw.png" height="45" width="45" /> </a></li>
+            <li><a href="#"> <img src="image/social/in.png" height="45" width="45" alt="Linkedin" /> </a></li>
+            <li><a href="#" target="_blank"> <img src="image/social/gp.png" height="45" width="45" alt="googleplus" /> </a></li>
+          </ul>
+        </div>
+        
+        <!-- Social Icons Ends -->
+        
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+  <div class="footer_bottom">
+    <div class="container">
+      <div class="copyright">Copyright © 2019 - All Rights Reserved - IJDTS</div>
+      <div class="bottom_links">
+        <ul>
+          <li>Developed by IJDTS</li>
+        </ul>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer Ends -->
+
+</div>
+</body>
+
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5d9f54cdfbec0f2fe3b91ce0/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+</html>
