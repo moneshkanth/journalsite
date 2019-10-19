@@ -1,0 +1,1073 @@
+<head>
+
+<link rel="shortcut icon" type="image/x-icon" href="Content/Images/favicon.png">
+<link href="newcss/dashboard.css" rel="stylesheet">
+<link href="Content/Styles/demo-page.css" rel="stylesheet" media="all">
+<link href="Content/Styles/hover.css" rel="stylesheet" media="all">
+   
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="IJDTS Research Journal, International Journal of Developments in Technology and Science
+(International Peer Reviewed, Open Access Journal ) ISSN: 2581-9119 Impact Factor:TBD" />
+
+<meta name="keywords" content="ugc approved,UGC, UGC approved journal, journal, UGC Approved, Publish free paper, free publication, free, conferences, low cost journal, publish paper in 500 INR, 500 INR journal,free cost,
+free journal,IJDTS,IJDTS research,e- Journal, International Journal, Indian Journal, peer reviewed, 
+call for research paper, Scientific Research & Development, online Journal, journal of engineering, 
+journal of Science, thesis publication, High Impact factor, 5 above impact factor, DOI, doi, doi and hard copy, 
+hard copy of certificate " />
+
+<meta name="Robots" content="all" />
+<meta name="googlebot" content="index, follow" />
+<meta name="allow-search" content="yes" />
+<meta name="subject" content=" International Journal of Developments in Technology and Science IJDTS">
+<meta name="copyright" content="www.ijdts.com" />
+<meta name="reply-to" content="INFO@ijdts.com" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
+
+<link href="Content/Styles/Site.css" rel="stylesheet" type="text/css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="jquery-1.8.0.min.js"></script>
+	<!--Start of Zopim Live Chat Script-->
+<script type="text/javascript">
+    /*
+    window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+    d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+    _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+    $.src="//v2.zopim.com/?3LIN0p9vF114P7Wg730pipnTn2hYeaR6";z.t=+new Date;$.
+    type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+    */
+</script>
+<!--End of Zopim Live Chat Script-->
+<script type="text/javascript">
+$(function(){
+$(".search").keyup(function() 
+{ 
+var searchid = $(this).val();
+var dataString = 'search='+ searchid;
+if(searchid!='')
+{
+    $.ajax({
+    type: "POST",
+    url: "searchPaper.php",
+    data: dataString,
+    cache: false,
+    success: function(html)
+    {
+    $("#result").html(html).show();
+    }
+    });
+}return false;    
+});
+
+jQuery("#result").live("click",function(e){ 
+    var $clicked = $(e.target);
+    var $name = $clicked.find('.name').html();
+    var decoded = $("<div/>").html($name).text();
+    $('#searchid').val(decoded);
+});
+jQuery(document).live("click", function(e) { 
+    var $clicked = $(e.target);
+    if (! $clicked.hasClass("search")){
+    jQuery("#result").fadeOut(); 
+    }
+});
+$('#searchid').click(function(){
+    jQuery("#result").fadeIn();
+});
+});
+</script>
+<!-- include jQuery library -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<!-- include Cycle plugin -->
+<script type="text/javascript" src="https://filemasbayu.googlecode.com/files/jquery.cycle.all.latest.js"></script>
+<script type="text/javascript">
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#testimonials1')
+	.before('<div id="nav">')
+	.cycle({
+        fx: 'fade', // choose your transition type, ex: fade, scrollUp, scrollRight, shuffle
+		pager:  '#nav'
+     });
+ 
+	  $('#testimonials2')
+	.after('<div id="nav2">')
+	.cycle({
+        fx: 'scrollRight', // choose your transition type, ex: fade, scrollUp, scrollRight, shuffle
+		pager:  '#nav2'
+     });
+});
+</script>
+<script type="text/javascript" src="Content/Scripts/jquery-1.6.1.min.js"></script>
+<script src="../code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+
+
+<!-- START - back to top-->
+<script>
+
+jQuery(document).ready(function() {
+				var offset = 220;
+				var duration = 500;
+				jQuery(window).scroll(function() {
+					if (jQuery(this).scrollTop() > offset) {
+						jQuery('.back-to-top').fadeIn(duration);
+					} else {
+						jQuery('.back-to-top').fadeOut(duration);
+					}
+				});
+				
+				jQuery('.back-to-top').click(function(event) {
+					event.preventDefault();
+					jQuery('html, body').animate({scrollTop: 0}, duration);
+					return false;
+				})
+			});
+</script>
+   <!-- END - back to top-->
+
+    <script type='text/javascript'>
+        if (typeof jQuery == 'undefined') { document.write('<script type="text/javascript" src="Content/Scripts/jquery-1.9.1.min.js"><\/script>'); }</script>
+    <!-- END - jQuery Reference -->
+    <!-- START - SCROLLING -->
+    <script type="text/javascript" src="Content/Scripts/jquery.carouFredSel-6.2.0-packed.js"></script>
+   
+   
+   
+    <script type="text/javascript">
+        $(function () {
+            //	Scroll-up for Testimonials
+            $('#newsscroller').carouFredSel({
+                responsive: true,
+                direction: 'up',
+                scroll: { duration: 1000, pauseOnHover: 'resume' }
+            });
+
+        });
+    </script>
+    <!-- END - SCROLLING -->
+    <!-- STARTS - MAIN MENU -->
+    <script type="text/javascript" src="Content/Scripts/ddsmoothmenu.js"></script>
+    <script type="text/javascript">
+        ddsmoothmenu.init({
+            mainmenuid: "smoothmenu",
+            orientation: 'h',
+            classname: 'ddsmoothmenu',
+            contentsource: "markup"
+        })
+    </script>   
+</head>
+<table width="1024px" style="border-collapse:separate;" align="center">
+</tr>
+	<td colspan="3" bgcolor="#E3F2FD">
+		
+<header>
+	<title>IJDTS(ISSN 2581-9119)</title>
+</header> 
+<!--Start of Tawk.to Script-->
+<!--GET THE SCRIPT FROM CHARBOT THEN PLACE IT HERE-->
+<!--End of Tawk.to Script-->      
+<table>
+<tr>
+  <td>
+  	<div class="logostyle">
+        <a href="index.php">
+            <img src="Content/Images/favicon.png" width="110" height="123" />
+        </a>
+    </div>
+  </td>
+  <td>
+  	<div class="sitetitle">
+    	International Journal of Developments in Technology and Science
+    </div>
+    <div class="sitesubtitle">
+    	(International Open Access Journal )
+    </div>
+    <div class="issnstyle">
+    	ISSN: 2581-9119 </br></br>
+		
+    </div>
+	</td>
+  <td>
+        <div class="impactfactorstyle">
+        	<a href="#" target="new">
+            Impact Factor</br>TBD
+            </a>
+        </div>
+        <div class="headerloginbutton">
+        	<!--<a class="btnimpact" href="Authorhome/alogin.php" target="new">Login to Author Home </a>-->
+            <a href="Authorhome/alogin.php" target="new"class="hvr-bubble-float-left speciallinkbutton">Login to Author Home </a>
+        </div>  
+    </td>
+</tr>
+<tr>
+	<td colspan="3" width="1024px">
+    	<div id="smoothmenu" class="ddsmoothmenu">
+<ul>
+<li><a href="index.php">HOME</a>
+	<ul>
+        <li><a href="about.php">About us</a> </li>
+		
+		<li><a href="ResearchArea.php">Research Area</a> </li>
+	</ul>
+</li>
+<li><a href="editorialBoard.php">EDITORIAL / RMS</a>
+	<ul>
+    	<li><a href="editorialBoard.php">Editorial Board member</a></li>
+        <li><a href="rms/login.php">Login into RMS</a></li>
+        <li><a href="aboutRMS.php">About RMS</a></li>
+        <li><a href="JoinAsReviewer.php">Join RMS As Reviewer/Referral</a></li>
+		
+    </ul>
+</li>
+<li><a href="#">FOR AUTHOR</a>
+    <ul>
+        <li><a href="submitonline.php">Submit Paper Online</a></li>
+        <li><a href="pubGuide.php">Publication Guidelines</a></li>
+        <li><a href="paymentInfo.php">Publication Charges</a></li>
+        <li><a href="hardcopyrelated.php">Hardcopy Related</a></li>
+        <li><a href="https://www.payumoney.com/paybypayumoney/#/11424" target="_blank">Pay Publication Fee Online</a></li>
+        <li><a href="ResearchArea.php">Research Area</a></li>
+        <li><a href="">Forms & Format</a>
+     		<ul class="rightarrowclass">   
+                <li><a href="Content/Files/IJEDR_PaperFormat.docx">Sample Paper Format</a></li>
+                <li><a href="Content/Files/IJEDR_CopyrightTransferForm.pdf">Copyright Transfer Form</a></li>
+                <li><a href="Content/Files/IJEDR_UndertakingByAuthors.pdf">Undertaking By Authors</a></li>
+            </ul>
+        </li>
+	
+    </ul>
+</li>
+<li><a href="archive.php?vol=7&issue=2">CURRENT ISSUE</a></li>
+<li><a href="archivelist.php">ARCHIVE</a>
+</li>
+<li><a href="ConferenceProposal.php">CONFERENCE PROPOSAL</a>
+	<ul>
+	<li><a href="ConferenceProposal.php">CONFERENCE PROPOSAL</a></li>
+    <li><a href="ncetse14.php">NCETSE-14</a></li>
+    <li><a href="ncisect15.php">NCISECT-15</a></li>
+    <li><a href="eeecos14.php">EEECOS-14</a></li>
+    <li><a href="rteece14.php">RTEECE-14</a></li>
+    </ul>
+</li>
+<li><a href="submitonline.php">SUBMIT PAPER ONLINE</a></li>
+<li><a href="contact.php">CONTACT US</a>
+	<ul>
+	<li><a href="address.php">Contact and Address</a></li>
+    
+    </ul>
+</li>
+
+</ul>
+<br style="clear: left" />
+</div>    </td>
+</tr>
+</table>
+	</td>
+</tr>
+<tr>
+	<td width="200px" style="vertical-align:top; background-color:rgba(255,255,255,1.00)">
+		<style type="text/css">
+.sectionheading{
+	min-width:200px;
+	font-family:Arial;
+	font-size:14px;
+	font-weight:bold;
+	border-bottom:1px solid #128DC0;
+	border-top:1px solid #128DC0;
+	text-align:center;
+	padding:5px 1px 5px 1px !important;
+	background-color:rgba(206,226,243,1.00);
+	margin:0px 0px 0px 0px !important;	
+}
+</style>
+<table width="200px">
+<tr>
+<td>
+<p class="sectionheading">Current Issue</p>
+<div style="padding:10px 0px 10px 0px; line-height:20px; text-align:center !important">
+        <a href="callforpaper.php" style="font-weight:bold; padding-bottom:10px !important">Call For Papers<br/> May 2019</a><br/>
+        <a href="callforpaper.php">
+            Volume 7 | Issue 2<br/>
+            Last Date : 29 May 2019<br/>
+			
+        </a>
+        <a href="submitonline.php" style="font-weight:bold; font-size:13px; padding-top:10px !important">Submit Manuscript Online</a> </br>
+Impact Factor: 5.67 </br>
+
+		</div>
+
+
+<p class="sectionheading">Archives</p>
+<div>
+    <div style="border-bottom:1px solid rgba(212,213,220,1.00)">
+            <a href="http://www.ijedr.org/archive?vol=7&issue=2" class="hvr-bounce-to-rightR speciallinkR">Current Issue</a>
+            <a href="archivelist.php" class="hvr-bounce-to-rightR speciallinkR">Past Issue</a>
+            <a href="#" class="hvr-bounce-to-rightR speciallinkR">Conference Proceedings</a>
+    </div>
+</div>
+
+
+<p class="sectionheading">For Authors</p>
+<div>
+    <div style="border-bottom:1px solid rgba(212,213,220,1.00)">
+	<a href="callforpaper.php" class="hvr-bounce-to-rightR speciallinkR">Call For Paper</a>
+            <a href="http://www.ijedr.org/Authorhome/alogin.php" class="hvr-bounce-to-rightR speciallinkR">Track Submitted Paper</a>
+            <a href="submitonline.php" class="hvr-bounce-to-rightR speciallinkR">Submit Manuscript online</a>
+            <a href="pubGuide.php" class="hvr-bounce-to-rightR speciallinkR">Publication Guidelines</a>
+          <!--  <a href="paymentInfo.php" class="hvr-bounce-to-rightR speciallinkR">Publication Charges</a>-->
+           <!-- <a href="selectpaycharges.php" class="hvr-bounce-to-rightR speciallinkR">Pay Charges Online</a>-->
+            <a href="hardcopyrelated.php" class="hvr-bounce-to-rightR speciallinkR">Hardcopy Related</a>
+            <a href="doi.php" class="hvr-bounce-to-rightR speciallinkR">DOI</a>
+            <a href="ResearchArea.php" class="hvr-bounce-to-rightR speciallinkR">List of Research Area</a>
+    </div>
+</div>
+
+<p class="sectionheading">Forms / Downloads</p>
+<div>
+    <div style="border-bottom:1px solid rgba(212,213,220,1.00)">
+            <a href="Content/Files/IJEDR_PaperFormat.docx" class="hvr-bounce-to-rightR speciallinkR">Sample Paper format</a>
+            <a href="Content/Files/IJEDR_CopyrightTransferForm.pdf" class="hvr-bounce-to-rightR speciallinkR">CopyRight Transfer Form</a>
+            <a href="Content/Files/IJEDR_UndertakingByAuthors.pdf" class="hvr-bounce-to-rightR speciallinkR">Undertaking Form</a>
+     </div>
+</div>
+
+<p class="sectionheading">Indexing Partner</p>
+<div>
+    <div style="border-bottom:1px solid rgba(212,213,220,1.00)">
+            <marquee   behavior="alternate" direction="up" style="height:450px; text-align:center" scrolldelay="10" scrollamount="3" onmouseover="this.stop();" onmouseout="this.start();">
+            	<a href="http://scholar.google.co.in/scholar?hl=en&q=ijedr" target="_blank">
+<img src="Content/Images/indxGooglescholar.png" width="90" height="40" border="0" style="border:1px solid #CBD8FF"/></a>
+<a href="http://www.researcherid.com/rid/B-5936-2016" target="_blank">
+<img src="Content/Images/tomson.png" width="90" height="40" border="0" style="border:1px solid #CBD8FF"/></a>
+
+<a href="http://drji.org/IndexingCertificate.aspx?aid=2321-9939" target="_blank">
+<img src="Content/Images/DRJI.png" width="90" height="40" border="0" style="border:1px solid #CBD8FF"/></a>
+
+<a href="http://ijedr.academia.edu/EditorIJEDR" target="_blank">
+<img border="0" src="Content/Images/indxAcademia.jpg" width="90" height="40" style="border:1px solid #CBD8FF"  /></a> 
+            <img src="Content/Images/mad.jpg" width="90" height="40" style="border:1px solid #CBD8FF"/>
+            <img src="Content/Images/indxCabells.jpg" width="90" height="40" style="border:1px solid #CBD8FF"/>
+            <img src="Content/Images/indxIssuu.jpg" width="90" height="40" style="border:1px solid #CBD8FF"/>
+            <img src="Content/Images/indxIC.jpg" width="90" height="40" style="border:1px solid #CBD8FF"/>
+            <img src="Content/Images/index/1.jpg" width="90" height="40" style="border:1px solid  #CBD8FF"/>
+            <img src="Content/Images/index/16.jpg" width="90" height="40" style="border:1px solid  #CBD8FF"/> 
+            <img src="Content/Images/index/9.png" width="90" height="40" style="border:1px solid #CBD8FF"/>
+            <img src="newcss/i4.png" width="90" height="40" style="border:1px solid #CBD8FF"/>
+            <img src="newcss/i8.png" width="90" height="40" style="border:1px solid #CBD8FF"/>
+            <img src="newcss/i7.png" width="90" height="40" style="border:1px solid #CBD8FF"/>
+            <img src="newcss/i3.png" width="90" height="40" style="border:1px solid #CBD8FF"/>
+            <img src="newcss/i9.png" width="90" height="40" style="border:1px solid #CBD8FF"/>
+            <img src="newcss/i2.gif" width="90" height="40" style="border:1px solid #CBD8FF"/>
+            <img src="newcss/i5.png" width="90" height="40" style="border:1px solid #CBD8FF"/>
+            <img src="newcss/i6.png" width="90" height="40" style="border:1px solid #CBD8FF"/>
+            <img src="newcss/i10.jpg" width="90" height="40" style="border:1px solid #CBD8FF"/>
+            
+            <img src="Content/Images/index/n3.jpg" width="90" height="40" style="border:1px solid #CBD8FF"/>
+            <img src="Content/Images/index/n7.png" width="90" height="40" style="border:1px solid #CBD8FF"/>
+            <img src="Content/Images/index/n9.png" width="90" height="40" style="border:1px solid #CBD8FF"/>
+            <img src="Content/Images/index/n10.jpg" width="90" height="40" style="border:1px solid #CBD8FF"/>
+            <img src="Content/Images/index/n12.png" width="90" height="40" style="border:1px solid #CBD8FF"/>
+            <img src="Content/Images/index/n18.gif" width="90" height="40" style="border:1px solid #CBD8FF"/>
+            </marquee>
+    </div>
+</div>
+
+<p class="sectionheading">Research Area</p>
+<div>
+    <div style="border-bottom:1px solid rgba(212,213,220,1.00)">
+            
+<a href="http://www.ijedr.org/ResearchArea.php" class="hvr-bounce-to-rightR speciallinkR">Engineering</a>
+<a href="http://www.ijedr.org/ResearchArea.php" class="hvr-bounce-to-rightR speciallinkR">Science & Technology</a>
+<a href="http://www.ijedr.org/ResearchArea.php" class="hvr-bounce-to-rightR speciallinkR">Pharmacy</a>
+<a href="http://www.ijedr.org/ResearchArea.php" class="hvr-bounce-to-rightR speciallinkR">Science All </a>
+<a href="http://www.ijedr.org/ResearchArea.php" class="hvr-bounce-to-rightR speciallinkR">Commerce</a>
+<a href="http://www.ijedr.org/ResearchArea.php" class="hvr-bounce-to-rightR speciallinkR">Arts</a>
+<a href="http://www.ijedr.org/ResearchArea.php" class="hvr-bounce-to-rightR speciallinkR">Medical Science</a>
+<a href="http://www.ijedr.org/ResearchArea.php" class="hvr-bounce-to-rightR speciallinkR">Life Sciences</a>
+<a href="http://www.ijedr.org/ResearchArea.php" class="hvr-bounce-to-rightR speciallinkR">Health Science</a>
+<a href="http://www.ijedr.org/ResearchArea.php" class="hvr-bounce-to-rightR speciallinkR">Social Science and Humanities</a>
+<a href="http://www.ijedr.org/ResearchArea.php" class="hvr-bounce-to-rightR speciallinkR">Managment and Tourism</a>
+<a href="http://www.ijedr.org/ResearchArea.php" class="hvr-bounce-to-rightR speciallinkR">LAW & Education </a>   
+
+   </div>
+</div>
+
+<p class="sectionheading">LICENSE</p>
+<div style="border-bottom:1px solid rgba(212,213,220,1.00)">
+    <div class="content"> <p>
+      <a href="http://creativecommons.org/licenses/by-nc/3.0/" target="new" rel="license" style="text-decoration:none">
+      This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License
+    </p>  
+    <center>
+      <img alt="Creative Commons License"  style="border-width:0; " src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png"  />
+      </center>
+      </a>
+    <center>
+        <img src="Content/Images/openaceess.png" width="160px"/></br>
+        <img src="Content/Images/noplag.png"/>
+    </center>
+    </div>
+</div>
+
+<p class="sectionheading">Facts & Figures</p>
+<div>
+    <div style="border-bottom:1px solid rgba(212,213,220,1.00)">
+            
+<a href="" class="hvr-bounce-to-rightR speciallinkR">Impact Factor: 5.67</a>
+<a href="#" class="hvr-bounce-to-rightR speciallinkR">Issues Per Year: 4</a>
+<a href="#" class="hvr-bounce-to-rightR speciallinkR">Article Submitted: 25967</a>
+<a href="#" class="hvr-bounce-to-rightR speciallinkR">Article Published: 8545</a>
+<a href="#" class="hvr-bounce-to-rightR speciallinkR">No. of contributors: 18154</a>
+<a href="#" class="hvr-bounce-to-rightR speciallinkR">Total Reviewers: 780</a>
+<a href="#" class="hvr-bounce-to-rightR speciallinkR">Total Countries: 47</a>
+    </div>
+</div>
+
+<p class="sectionheading">Visitor Statistics</p>
+<div>
+    <div style="border-bottom:1px solid rgba(212,213,220,1.00)">
+            <center><script type="text/javascript" src="http://widget.supercounters.com/flag.js"></script><script type="text/javascript">sc_flag(741489,"#FFF","000","#FFF",2,10,0,0)</script><br><noscript></noscript>
+             </center>
+    </div>
+</div>
+
+</td>
+</tr>
+</table>    </td>
+    <td width="620px" style="vertical-align:top; background-color:rgba(255,255,255,1.00)">
+    	<table width="600px">
+<tr>
+<td align="center">
+<style type="text/css">
+    .con{
+        width:100%;
+        margin:0 auto;
+    }
+    #searchid
+    {
+        width:95%;
+        border:solid 3px rgba(212,213,220,1.00);
+        padding:10px;
+        font-size:14px;
+		background-color:rgba(255,255,255,1.00);
+    }
+    #result
+    {
+        position:inherit;
+        width:540px;
+        padding:10px;
+        display:none;
+        margin-top:-1px;
+        border-top:0px;
+        overflow:hidden;
+        border:1px #CCC solid;
+        background-color: white;
+    }
+    .show
+    {
+        padding:10px; 
+        border-bottom:1px #999 dashed;
+        font-size:15px; 
+        height:50px;
+    }
+    .show:hover
+    {
+        background:#4c66a4;
+        color:#FFF;
+        cursor:pointer;
+    }
+	.span6
+{
+   
+    border: 2px solid #FF3300;
+    color: #FF3300;
+}
+
+div#page {
+			max-width: 900px;
+			margin-left: auto;
+			margin-right: auto;
+			padding: 20px;
+		}
+		
+		.back-to-top {
+			position: fixed;
+			bottom: 2em;
+			right: 0px;
+			text-decoration: none;
+			color: #000000;
+			background-color: rgb(102, 255, 51);
+			font-size: 16px;
+			padding: 1em;
+			display: none;
+		}
+
+		.back-to-top:hover {	
+			background-color: #00ba8b;
+		}	
+</style> 
+
+<style>
+#fbox-background {
+    display: none;
+    background: rgba(0,0,0,0.8);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+}
+
+#fbox-close {
+    width: 100%;
+    height: 100%;
+}
+
+#fbox-display {
+    background: #FFFFFF;
+    border: 5px solid #0066FF;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 32%;
+    left: 37%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#fbox-button {
+    float: right;
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+#fbox-button:before {
+    content: "CLOSE";
+    padding: 5px 8px;
+    background: #828282;
+    color: #eaeaea;
+    font-weight: bold;
+    font-size: 10px;
+    font-family: Tahoma;
+}
+
+#fbox-link,#fbox-link a.visited,#fbox-link a,#fbox-link a:hover {
+    color: #aaaaaa;
+    font-size: 9px;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px;
+}
+</style>
+<!-- Google Code for IJEDR Conversion Page -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 921642378;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "nIiKCIOAl24Qisu8twM";
+var google_remarketing_only = false;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/921642378/?label=nIiKCIOAl24Qisu8twM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<!-- Google Code for IJEDR Conversion Page -->
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+ fbq('init', '1422392121357966'); 
+fbq('track', 'PageView');
+</script>
+<noscript>
+ <img height="1" width="1" 
+src="https://www.facebook.com/tr?id=1422392121357966&ev=PageView
+&noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
+<script type='text/javascript'>
+//<![CDATA[
+jQuery.cookie = function (key, value, options) {
+// key and at least value given, set cookie...
+if (arguments.length > 1 && String(value) !== "[object Object]") {
+options = jQuery.extend({}, options);
+if (value === null || value === undefined) {
+options.expires = -1;
+}
+if (typeof options.expires === 'number') {
+var days = options.expires, t = options.expires = new Date();
+t.setDate(t.getDate() + days);
+}
+value = String(value);
+return (document.cookie = [
+encodeURIComponent(key), '=',
+options.raw ? value : encodeURIComponent(value),
+options.expires ? '; expires=' + options.expires.toUTCString() : '', // use expires attribute, max-age is not supported by IE
+options.path ? '; path=' + options.path : '',
+options.domain ? '; domain=' + options.domain : '',
+options.secure ? '; secure' : ''
+].join(''));
+}
+// key and possibly options given, get cookie...
+options = value || {};
+var result, decode = options.raw ? function (s) { return s; } : decodeURIComponent;
+return (result = new RegExp('(?:^|; )' + encodeURIComponent(key) + '=([^;]*)').exec(document.cookie)) ? decode(result[1]) : null;
+};
+//]]>
+</script>
+<script type='text/javascript'>
+jQuery(document).ready(function($){
+if($.cookie('popup_facebook_box') != 'yes'){
+$('#fbox-background').delay(5000).fadeIn('medium');
+$('#fbox-button, #fbox-close').click(function(){
+$('#fbox-background').stop().fadeOut('medium');
+});
+}
+$.cookie('popup_facebook_box', 'yes', { path: '/', expires: 7 });
+});
+</script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div id='fbox-background'>
+<div id='fbox-close'>
+</div>
+<div id='fbox-display'>
+<div id='fbox-button'>
+</div>
+<table>
+    <h3> Please Like Our Facebook Page for more Updates<br>
+	www.ijedr.org | editor@ijedr.org
+	</h3>
+    <tr>
+        <td>
+            <div class="fb-page" data-href="https://www.facebook.com/ijedr" data-width="450" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false">
+                <div class="fb-xfbml-parse-ignore">
+                    <blockquote cite="https://www.facebook.com/ijedr"><a href="https://www.facebook.com/ijedr">International Journal of Engineering Development and Research www.ijedr.org</a></blockquote>
+                </div>
+            </div>
+        </td>
+        <td>
+            <a href="http://www.facebook.com/ijedr" target="new" >
+            <img src="Content/Images/social/fb.png" height="45" width="45"/>
+            </a>
+            <a href="http://in.linkedin.com/in/ijedr"  target="new">
+            <img src="Content/Images/social/in.png" height="45" width="45"/>
+            </a>
+            <a href="https://twitter.com/IJEDR"  target="new">
+            <img src="Content/Images/social/tw.png" height="45" width="45" />
+            </a>
+            <a href="https://plus.google.com/110524390468036558494" target="new" >
+            <img src="Content/Images/social/gp.png" height="45" width="45" />
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            <li><a href="http://www.ijedr.org/callforpaper.php"> Paper Submission:<strong> 29 May 2019.</strong></a></li> <br>
+            <li><b>ISSN: 2321-9939</b></li><br>
+             <li><b><a href="https://scholar.google.co.in/citations?user=npbRRwEAAAAJ&hl=en" target="new"> Impact Factor : 4.98 </a></b></li><br>
+            <li>Acceptance/Rejection Notification: <strong>Within 02-04 Days after submitting paper.</strong></li><br>
+              <br/><a href="submitonline.php" class="myButton" style="width:70%">Submit Paper online </a><br/>
+             </td>
+        <td valign="center">
+            <img src="Content/Images/logo.png" width="110" height="123" /></a>
+        </td>
+    </tr>
+</table>
+<div id="fbox-link">Powered by <a style="padding-left: 0px;" href="http://www.ijedr.org" rel="nofollow">IJEDR</a></div>
+
+</div>
+</div>       
+<a href="#" class="back-to-top">Back to Top</a>
+
+
+<!-- Main Page- Center IJEDRXplore  search option-->
+<div class="con">
+    <input type="text" class="search" id="searchid" placeholder="IJEDRXplore - Search for Paper Content, Author Name, Title etc." />
+    <div id="result">
+    </div>
+</div>
+
+<!-- shortcut link center -->
+<div style="border-bottom:1px solid rgba(212,213,220,1.00)">
+    <div id="effects" class="effects">
+        <a href="http://www.ijedr.org/Authorhome/alogin.php" class="hvr-bounce-to-right speciallink">Track Paper / Login to Author Home</a>
+    </div>
+    <div>
+        <a href="callforpaper.php" class="hvr-underline-from-left speciallink1">Current Issue Details</a>
+        <a href="submitonline.php" class="hvr-underline-from-left speciallink1" style=" font-weight:bold; font-size:16px; color:#139B9E">Submit Paper Online</a>
+        <a href="http://www.ijedr.org/" class="hvr-underline-from-left speciallink1">About IJEDR</a>
+        <a href="http://www.ijedr.org/pubGuide.php" class="hvr-underline-from-left speciallink1">Publication Guidelines</a>
+        <a href="http://www.ijedr.org/JoinAsReviewer.php" class="hvr-underline-from-left speciallink1">Join as a Reviewer/Referral</a>
+    </div>
+</div>
+<!-- /shortcut link center -->
+
+<!--basicintro -->
+<div style="padding:5px; border-bottom:1px solid rgba(212,213,220,1.00)">
+<p style="font-family:arial; font-size:13px; text-align:justify; line-height:20px">
+The International journal of Engineering development and research(IJEDR) aims to explore advances in research pertaining to applied, theoretical and experimental Technological studies. The goal is to promote scientific  information interchange between researchers, developers, engineers, students, and practitioners working in and around the world.</p>
+</div>
+<div style="padding:5px; border-bottom:1px solid rgba(212,213,220,1.00)">
+<p style="font-family:arial; font-size:16px; text-align:justify; line-height:20px">
+<b> Indexing In Google Scholar, ResearcherID Thomson Reuters, Mendeley : reference manager, Academia.edu, arXiv.org, Research Gate, CiteSeerX, DocStoc, ISSUU, Scribd, and many more | High Impact Factor: 5.67</br>
+Digital object identifier (DOI) and Hard Copy of certificate Provided.  </b></p>
+</div>
+
+<!-- Journal Details -->
+<div style="padding:5px; border-bottom:1px solid rgba(212,213,220,1.00)">
+	<table>
+    	<tr>
+        	<td colspan="2" width="600px" valign="top">
+            	<div class="texttitle">
+                	Important Journal Details
+                </div>
+            </td>
+        </tr>
+        <tr>
+        	<td width="400px" valign="top">
+                <div class="journaldetails">
+                	<b>Journal Type</b>: International Open Access</br>
+                    <b>ISSN</b>: 2321-9939</br>
+                    <b>Frequency</b>: Quarterly (4 issue Annually)</br>
+                    <a href="ResearchArea.php" target="new"> 
+				   <b>Subject Category &nbsp;</b>:Engineering, Science & Technology, Pharmacy, Biological Science, Appliled Mathematics, Physics, Chemistry, Science, Management(MBA), Commerce, Arts, Medical Science, Life Sciences, Languages, Health Science,
+Social Science and Humanities				   </a></br>
+                    <b>Impact Factor</b>:</br>
+					5.67 <a href="https://scholar.google.co.in/citations?user=npbRRwEAAAAJ&hl=en" target="new"> (Calculated by Google Scholar h-index-Year:2017)</a></br>
+                    4.98 <a href="https://scholar.google.co.in/citations?user=npbRRwEAAAAJ&hl=en" target="new"> (Calculated by Google Scholar h-index-Year:2015-2016)</a></br>
+                    4.442 <a href="https://www.ijedr.org/Content/Images/SJIF_Certi.png" target="new"> (Calculated by SJIF-Year: 2013-2014)</a></br>
+                    2.87 <a href="https://scholar.google.co.in/citations?user=npbRRwEAAAAJ&hl=en" target="new"> (Calculated by Google Scholar h-index-Year:2014)</a></br>
+                    1.79 <a href="http://www.uifactor.org/Search.aspx?q=2321-9939" target="new"> (Calculated by UIF -Year: 2012)  </a> </br>
+                                   </div>
+            </td>
+            <td width="200px" align="right" valign="top">
+            	<a href="http://www.ijedr.org/callforpaper.php"> <img src="Content/Images/1302.jpg" height=290 width=190  /> </a>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<!--impoertant dates -->
+<div style="padding:5px; border-bottom:1px solid rgba(212,213,220,1.00)">
+	<div class="texttitle">
+    	Important Dates regarding Publication Procedure
+     </div>
+     <div class="journaldetails">
+         <b>Current Issue</b>:Volume 7 | Issue 2 | Month- May 2019 </br>
+         <b>Paper Submission Till</b>:29 May 2019.</br>
+         <b>Review Results (Acceptance/Rejection) Notification</b>: Within 02-04  Days after submitting paper.</br>
+         <b>Paper Publish</b>: Within 02-07  Days after submitting all the required documents.
+    </div>
+</div>
+
+<!--type of artical accepted for publication -->
+<div style="padding:5px; border-bottom:1px solid rgba(212,213,220,1.00)">
+	<div class="texttitle">
+    	Types of Articles invited
+     </div>
+     <div class="journaldetails" style="text-align:justify">
+     	Research Papers, Survey Papers, Study Papers, Subjective Papers, Experimental Result Papers, Analysis Study Research Papers, Informative Article, Comparison Papers, Case Studies Papers, Review Papers, Comparative Studies, Dissertation Chapters, Research Proposals or Synopsis, Working Projects, New Innovation & Idea, Prototypes and Models and many More
+    </div>
+</div>
+
+<!--Benefits of Publishing Paper at IJEDR -->
+<div style="padding:5px; border-bottom:1px solid rgba(212,213,220,1.00)">
+	<div class="texttitle">
+    	Benefits of publishing paper in IJEDR
+     </div>
+     <div class="journaldetails" style="text-align:justify">
+     	<ul class="journaldetails">
+        	<li>Quick, qualitative and speedy review and publication process </li>
+			
+	<img src= "new12.gif" ></a> </li>
+            <li><a href="http://www.ijedr.org/Authorhome/alogin.php">Check your paper status online using paper registration id and author email address</a></li>
+            <li>IJEDR started &ldquo;go green initiative  &ldquo;by providing the e-Publication letter, e-certificate to each author for the publication of the paper.(We are provinding the Hard Copy of certificates and publication letter on Request based only(for indian author) with additional charges.)</li>
+            <li><strong>Soft copy of &quot;certificate of  publication&quot; of all authors (instantly available after publication)</strong></li>
+			 <li>Automated citation generator </li>
+			 <li><strong>Providing a <a href="http://www.ijedr.org/doi.php"> digital object identifier (DOI) </a></strong></li>
+			<li>Providing the mail and SMS notification to the author for each stage of the paper publication procedure.</li>
+            <li>IJEDR has highly secure SSL certificate based website <a href="https://www.ijedr.org"> (https://www.ijedr.org) </a></li>
+            <li>Prestigious reviewers from Well-known institutes/universities among the world.</li>
+			<li>Providing hard copy of certificate based on request with additional charges.</li>
+            <li>Meta  level programming in order to make your paper SEO effective.</li>
+            <li>provide author research guidelines &amp; support by mail, SMS and the call. </li>
+            <li>Indexing of paper in all major online journal databases like Google Scholar, ResearcherID Thomson Reuters Indexing, Mendeley : reference manager, Academia.edu, arXiv.org : cornell university library, Thomson Reuters, Research Gate, CiteSeerX, DOAJ : Directory of Open Access Journals, DRJI, DocStoc, GetCited,Base,ISEDN, Wiki CFP, Index Copernicus International, Cabell's Directory, Open J Gate, ISSUU, Scribd,
+ASI : Advance Science Indexing, RefSeek, Utem.</li>
+        </ul>
+    </div>
+</div>
+ <center>
+    	<!--<img src="Content/Images/IJEDR-PUB-STEPhighresol.png" width="600px" height="550px"/>-->
+    <a href="submitonline.php">    <img src="Content/Images/IJEDR-PUB-STEPlowresol.png"/> </a>
+    </center>
+<!--contact us -->
+<div style="padding:5px; border-bottom:1px solid rgba(212,213,220,1.00)">
+	<div class="texttitle">
+    	Contact Us
+     </div>
+     <div class="journaldetails" style="text-align:justify">
+     	Authors can communicate any time to IJEDR through mail - <a href="mailto:editor@ijedr.org">editor@ijedr.org</a></br> 
+        If author have paper registration ID then kindly mention it in the subject field of the mail.</br> </br> 
+        Also author can directly call to our call support department in given time only.</br> 
+        Contact No. -  +91 7048 421102, +91 9426 033211</br> 
+        Call support will be available on Monday to Saturday: 11:00 AM to 07:00 PM IST
+    </div>
+	</br>
+<script>
+  (function() {
+    var cx = '015796116848113633991:yoxokx4ffxc';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+</br>
+  <div>
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-99629460-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  
+    	<script>
+  (function() {
+    var cx = '015796116848113633991:yoxokx4ffxc';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+        <a href="http://www.facebook.com/ijedr" target="new" >
+        	<img src="Content/Images/social/fb.png" height="45" width="45"/>
+        </a>
+        <a href="http://in.linkedin.com/in/ijedr"  target="new">
+        	<img src="Content/Images/social/in.png" height="45" width="45"/>
+        </a>
+        <a href="https://twitter.com/IJEDR"  target="new">
+        	<img src="Content/Images/social/tw.png" height="45" width="45" />
+        </a>
+        <a href="https://plus.google.com/110524390468036558494" target="new" >
+        	<img src="Content/Images/social/gp.png" height="45" width="45" />
+        </a>
+    </div>
+</div>
+</td>
+<tr>
+</table>    </td>
+    <td width="200px" style="vertical-align:top; background-color:rgba(255,255,255,1.00)">
+    	
+
+<style type="text/css">
+.sectionheading{
+	min-width:200px;
+	font-family:Arial;
+	font-size:14px;
+	font-weight:bold;
+	border-bottom:1px solid #128DC0;
+	border-top:1px solid #128DC0;
+	text-align:center;
+	padding:5px 1px 5px 1px;
+	background-color:rgba(206,226,243,1.00);	
+}
+</style>
+<table width="200px">
+<!-- Vertical menubar for Reviewer Only-->
+<tr>
+<td>
+<p class="sectionheading">ISSN Details</p>
+<div style="padding-top:10px; padding-bottom:10px">
+    <center>
+    <img src="newcss/issn_logo.png" width="85%" height="47" /><br/>
+    <img src="Content/Images/barcode.png" width="60%" height="47" /><br/>
+	
+    </center>
+</div>
+
+<p class="sectionheading">DOI Details</p>
+<div style="padding-top:10px; padding-bottom:10px">
+    <center>
+ <a href="doi.php">   <img src="Content/Images/DOI.png" width="40%" /><br/>
+    <img src="Content/Images/figshare.png" width="70%" /> </a><br/> 
+    Providing A digital object identifier by <a href="https://dx.doi.org">DOI</a>
+    </center>
+        <a href="doi.php" class="hvr-bounce-to-rightR speciallinkR">How to get DOI?</a>
+</div>
+
+<p class="sectionheading"> For Reviewer /Referral (RMS) </p>
+<div>
+    <div style="border-bottom:1px solid rgba(212,213,220,1.00)">
+            <a href="aboutRMS.php" class="hvr-bounce-to-rightR speciallinkR">About RMS</a>
+            <a href="editorialBoard.php" class="hvr-bounce-to-rightR speciallinkR">Editorial Board</a>
+            <a href="http://www.ijedr.org/rms/login.php" class="hvr-bounce-to-rightR speciallinkR">Login into RMS Account</a>
+            <a href="JoinAsReviewer.php" class="hvr-bounce-to-rightR speciallinkR">Join as a reviewer/referral Member</a>
+    </div>
+</div>
+
+<p class="sectionheading"> Important Links </p>
+<div>
+    <div style="border-bottom:1px solid rgba(212,213,220,1.00)">
+            <a href="indexing.php" class="hvr-bounce-to-rightR speciallinkR">Major Indexing</a>
+            <a href="paymentterms.php" class="hvr-bounce-to-rightR speciallinkR">Payment Terms</a>
+            <a href="faq.php" class="hvr-bounce-to-rightR speciallinkR">FAQ</a>
+            <a href="privacypolicy.php" class="hvr-bounce-to-rightR speciallinkR">Privacy Policy</a>
+            <a href="copyright.php" class="hvr-bounce-to-rightR speciallinkR">Copyright infringement claims</a>
+    </div>
+</div>
+
+
+<p class="sectionheading"> NEWS & Conference </p>
+<div id="scrollnews">
+         <marquee   behavior="alternate" direction="up" style="height:150px" scrolldelay="10" scrollamount="3" onmouseover="this.stop();" onmouseout="this.start();">
+        <div style="font-family:arial; font-size:13px; text-align:justify; line-height:20px">
+		<a style="padding:0px !important; margin:0px !important" href="https://scholar.google.co.in/citations?user=npbRRwEAAAAJ&hl=en" target="_blank">Impact Factor: 4.98 Year: 2015</a>
+        <a href="http://www.ijedr.org/submitonline.php" target="_blank">Submit Paper online </a>
+        <a href="https://scholar.google.co.in/citations?user=npbRRwEAAAAJ&hl=en" target="_blank">Impact Factor: 5.67 Year: 2017</a>
+        <hr/> 
+        <a href="https://scholar.google.co.in/citations?user=npbRRwEAAAAJ&hl=en" target="_blank">Impact Factor: 5.67 Year: 2017</a>
+        <hr/>            
+        <a href="ncisect15.php" target="_blank">NCISECT-2015<br/>24-25 March, 2015 SRM University</a>
+        <hr/>
+        <a href="http://www.ijedr.org/submitonline.php" target="_blank">Submit Paper online </a>
+        <hr/>
+        <a href="https://scholar.google.co.in/citations?user=npbRRwEAAAAJ&hl=en" target="_blank">Impact Factor: 5.67 Year: 2017</a>
+        <hr/>
+        <a href="http://www.ijedr.org/pubGuide1.php" target="_blank">Publication Guidelines </a>
+        <hr/>
+        <a href="nc3n.php" target="_blank">NC3N-2015<br/>25 April, 2015 Valliammai Engineering College</a>
+        <hr/>
+        <a href="http://www.ijedr.org/submitonline.php" target="_blank">Submit Paper online </a>
+        <hr/>
+        <a href="https://scholar.google.co.in/citations?user=npbRRwEAAAAJ&hl=en" target="_blank">Impact Factor: 5.67 Year: 2017</a>
+        <hr/> 
+        <a href="https://scholar.google.co.in/citations?user=npbRRwEAAAAJ&hl=en" target="_blank">Impact Factor: 5.67 Year: 2017</a>
+        <hr/> 
+		</div>
+        </marquee>
+</div>
+
+
+<p class="sectionheading">Digital Library</p>
+<div style="border-bottom:1px solid rgba(212,213,220,1.00)">
+	<a href="ijedrXplore.php"><center><img src="Content/Images/IjedrXplore.png" width="70%" height="75"/></center></a>
+</div>
+
+<p class="sectionheading">IJEDR RMS</p>
+<div style="border-bottom:1px solid rgba(212,213,220,1.00)">
+	<a href="aboutRMS.php"><center> <img src="Content/Images/rms_join.png" width="170" height="550"> </center></a>
+</div>
+
+<p class="sectionheading">Our Social Link</p>
+<div style="border-bottom:1px solid rgba(212,213,220,1.00)">
+	<div class="content" align="center" style="padding-top:5px">
+        <a href="http://ijedr.academia.edu/EditorIJEDR" target="new" >
+        <img src="Content/Images/r-academia.png"  height="45" width="140" />
+        </a>
+        
+        <a href="http://www.researcherid.com/rid/B-5936-2016" target="new" >
+        <img src="Content/Images/index/n2.png"  height="45" width="140" />
+        </a>
+        
+        <a href="https://www.researchgate.net/profile/Editor_In_Cheif_Issn_2321-9939" target="new" >
+        <img src="Content/Images/index/n8.png"  height="45" width="140" />
+        </a>
+        
+        <br/>
+        <a href="http://in.linkedin.com/in/ijedr"  target="new">
+        <img src="Content/Images/social/in.png" height="45" width="45"/>
+        </a>
+        <a href="https://twitter.com/IJEDR"  target="new">
+        <img src="Content/Images/social/tw.png" height="45" width="45" />
+        </a>
+        <a href="https://plus.google.com/110524390468036558494" target="new" >
+        <img src="Content/Images/social/gp.png" height="45" width="45" />
+        </a>
+        <a href="http://www.facebook.com/ijedr" target="new" >
+        <img src="Content/Images/social/fb.png" height="45" width="45"/>
+        </a>
+        <br/>
+        <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fijedr&amp;width=200&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:80px;" allowTransparency="true"></iframe>
+	</div>
+</div>
+
+
+<p class="sectionheading">Open Access</p>
+<div style="border-bottom:1px solid rgba(212,213,220,1.00)">
+    <div class="content" align="center"> <center>
+          <a href="http://opendefinition.org/"><img alt="This material is Open Knowledge" border="0" src="http://assets.okfn.org/images/ok_buttons/ok_80x23_black.png" /></a>
+       <br/>  <a href="http://opendefinition.org/"><img alt="This material is Open Data" border="0"
+      src="http://assets.okfn.org/images/ok_buttons/od_80x23_black.png" /></a>
+            <br/>
+            <a href="http://opendefinition.org/"><img alt="This material is Open Content" border="0"
+      src="http://assets.okfn.org/images/ok_buttons/oc_80x23_black.png" /></a>
+          <br/>
+            <a href="http://opendefinition.org/ossd/"><img src="http://assets.okfn.org/images/ok_buttons/os_80x23_black.png" alt="" border="" /></a></center>
+        </div>
+</div>
+
+
+</td>
+</tr>
+</table>    </td>
+</tr>
+
+</tr>
+	<td colspan="3">
+		 <!-- COPYRIGHT -->
+<table>
+    <tr>
+        <td class="footerline">
+			<div class="footerlinetextleft">
+            	© Copyright 2019 <a href="index.php">IJEDR.ORG</a> All rights reserved
+            </div>
+        </td>
+        <td class="footerline">
+        	<div class="footerlinetextright">
+            	<a href="index.php">Home</a> | <a href="termscondition.php">Terms & Conditions</a> |<a href="disclaimer.php">Disclaimer</a>| <a href="https://www.facebook.com/ijedr" target="_blank">Facebook</a> | <a href="http://www.ijedr.org/contact.php">Contact us</a>
+			</div>
+        </td>
+    </tr>
+</table>
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/921642378/?guid=ON&amp;script=0"/>	</td>
+</tr>
+</table>
