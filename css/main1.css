@@ -2,7 +2,7 @@
 html {	height: 100%;}
 a, p, img, div, ul, li, span, h1, h2, h3, h4, h5, h4, form, input, select {	margin: 0;	padding: 0;	outline: none;	border: none;	list-style: none;	background: none;}
 img {	vertical-align: middle;}
-body {	margin: 0;	padding: 0;	font-family: Arial, Helvetica, sans-serif;  	font-size: 13px;	color: #343434;	line-height: 18px;	background: #ffffff url(../images/bg_top.jpg) 0 0 repeat-x;
+body {	margin: 0;	padding: 0;	font-family: Arial, Helvetica, sans-serif;  	font-size: 13px;	color: #000000;	line-height: 18px;	background: #ffffff url(../images/bg_top.jpg) 0 0 repeat-x;
 }
 a {	color: #21211f;	text-decoration: underline;}
 a:hover {	color: #21211f;	text-decoration: none;
@@ -44,9 +44,9 @@ img.border {	border: 1px solid #b8bcbe;}
 .currency {	margin: 0;}
 .price {	margin: 0;}
 .error_notification {	padding: 8px 40px;	margin: 10px 0;	border: 1px solid #f7aea5;	background: #ffe8e5 url(../images/icons/icon_wrong.png) 12px 10px no-repeat;	border-radius: 5px;	-moz-border-radius: 5px;	-webkit-border-radius: 5px;	-o-border-radius: 5px;	position: relative;}
-.error_notification h4 {	color: #343434;}
+.error_notification h4 {	color: #000000;}
 .success_notification {	padding: 8px 40px;	margin: 10px 0;	border: 1px solid #87cd7c;	background: #cdf3cd url(../images/icons/icon_right.png) 10px 10px no-repeat;	border-radius: 5px;	-moz-border-radius: 5px;	-webkit-border-radius: 5px;	-o-border-radius: 5px;	position: relative;}
-.success_notification h4 {	color: #343434;}
+.success_notification h4 {	color: #000000;}
 .icon_close {	width: 11px;	height: 11px;	display: block;	position: absolute;	top: 10px;	right: 10px;}
 
 /* --- Form Fields CSS --- */
@@ -256,7 +256,7 @@ img.border {	border: 1px solid #b8bcbe;}
 	width: auto;
 	height: auto;
 	padding: 4px 8px;
-	color: #343434;
+	color: #000000;
 	font-size: 12px;
 	font-weight: normal;
 	text-align: center;
@@ -302,7 +302,7 @@ img.border {	border: 1px solid #b8bcbe;}
 	display: block;
 	margin: 0;
 	padding: 0;
-	background: url(../images/bg_body.png) 50% 0 repeat-y;
+	background: url(../images/bg_body.png) 10% 0 repeat-y;
 }
 .container {
 	width: 985px;
@@ -328,7 +328,7 @@ img.border {	border: 1px solid #b8bcbe;}
 /* --- Social Icons CSS --- */
 
 .social_icons {
-	width: 200px;
+	width: 150px;
 	display: block;
 	float: left;
 	margin: 15px 0 0 0;
@@ -420,7 +420,7 @@ img.border {	border: 1px solid #b8bcbe;}
 	display: block;
 	float: right;
 	margin: 0 0 18px 0;
-	color: #343434;
+	color: #000000;
 	text-align: right;
 }
 .online_users img {
@@ -430,11 +430,11 @@ img.border {	border: 1px solid #b8bcbe;}
 	color: #21211f;
 }
 .search_job {
-	width:350px;
+	width:300px;
 	display: block;
 	float: right;
 	clear: right;
-	margin: 0;
+	margin: 1;
 }
 
 /****** NavBar - Menu css ******/
@@ -460,7 +460,7 @@ ul#css3menu1 ul {
 	-moz-box-shadow: 0.7px 0.7px 1px #777777;
 	-webkit-box-shadow: 0.7px 0.7px 1px #777777;
 	box-shadow: 0.7px 0.7px 1px #777777;
-	background-color: #333;
+	background-color: #001d57;
 	background-image: none;
 	border-width: 1px;
 	border-radius: 4px;
@@ -527,7 +527,7 @@ ul#css3menu1 ul li {
 ul#css3menu1 ul a {
 	text-align: left;
 	padding: 4px 0 0 0;
-	background-color: #333;
+	background-color: #001d57;
 	background-image: none;
 	border-width: 1px 0 0 0;
 	border-style: solid;
@@ -577,7 +577,7 @@ ul#css3menu1 span {
 }
 ul#css3menu1 a {
 	padding: 10px;
-	background-color: #333;
+	background-color: #001d57;
 	background-image: url(../images/mainbk.png);
 	background-repeat: repeat;
 	background-position: 0 200px;
@@ -588,7 +588,7 @@ border-color:;
 	text-decoration: none;
 }
 ul#css3menu1 li:hover>a, ul#css3menu1 li>a.pressed {
-	background-color: #00c4ff;
+	background-color: #000000;
 	background-image: url(../images/mainbk.png);
 	background-position: 0 100px;
 	border-style: none;
@@ -596,7 +596,7 @@ ul#css3menu1 li:hover>a, ul#css3menu1 li>a.pressed {
 	text-decoration: none;
 }
 ul#css3menu1 ul li:hover>a, ul#css3menu1 ul li>a.pressed {
-	background-color: #333;
+	background-color: #001d57;
 	background-image: none;
 	border-style: solid;
 	border-color: #262626;
@@ -614,14 +614,14 @@ ul#css3menu1 li.topfirst>a {
 		cursor:pointer;
 }
 ul#css3menu1 li.topfirst:hover>a, ul#css3menu1 li.topfirst>a.pressed {
-	text-shadow: #3d3d3d 0px -1px 1px;
+	text-shadow: #000000 0px -1px 1px;
 }
 ul#css3menu1 li.topmenu>a {
 	text-shadow: #000000 0px -1px 1px;
 	cursor:pointer;
 }
 ul#css3menu1 li.topmenu:hover>a, ul#css3menu1 li.topmenu>a.pressed {
-	text-shadow: #3d3d3d 0px -1px 1px;
+	text-shadow: #000000 0px -1px 1px;
 		cursor:pointer;
 }
 ul#css3menu1 li.toplast>a {
@@ -634,7 +634,7 @@ ul#css3menu1 li.toplast>a {
 		cursor:pointer;
 }
 ul#css3menu1 li.toplast:hover>a, ul#css3menu1 li.toplast>a.pressed {
-	text-shadow: #3d3d3d 0px -1px 1px;
+	text-shadow: #000000 0px -1px 1px;
 		cursor:pointer;
 }
 ul#css3menu1 ._>li>a {
@@ -985,12 +985,12 @@ ul.skills_cat {
 }
 ul.skills_cat li {
 	display: block;
-	color: #343434;
+	color: #000000;
 	padding: 2px 0 2px 10px;
 	background: url(../images/bullet_arrow.png) 0 6px no-repeat;
 }
 ul.skills_cat li a {
-	color: #343434;
+	color: #000000;
 	text-decoration: none;
 }
 ul.skills_cat li a:hover {
@@ -1333,7 +1333,7 @@ ul.left_links {
 }
 ul.left_links li {
 	margin: 0;
-	color: #343434;
+	color: #000000;
 	line-height: 20px;
 	padding: 0 0 0 0;
 	border-bottom: 1px solid #d6dbde;
@@ -1341,7 +1341,7 @@ ul.left_links li {
 	background-position: 0 0;
 }
 ul.left_links li a {
-	color: #343434;
+	color: #000000;
 	text-decoration: none;
 }
 ul.left_links li a:hover {
@@ -1407,7 +1407,7 @@ ul.list li img {
 	vertical-align: middle;
 }
 ul.list li a {
-	color: #343434;
+	color: #000000;
 	text-decoration: none;
 }
 ul.list li a:hover {
@@ -2554,7 +2554,7 @@ h3.username {
 	padding-right: 10px;
 	margin-right: 3px;
 	background: url(../images/arrow_right.png) 100% 8px no-repeat;
-	color: #343434;
+	color: #000000;
 	text-decoration: none;
 	font-weight: normal;
 }
@@ -2674,7 +2674,7 @@ ul.pagination_links li.active_page a {
 	display: block;
 	margin: 0 auto;
 	position: relative;
-	color: #343434;
+	color: #000000;
 	background: #eeeeee;
 	line-height: 20px;
 	border: 1px solid #bebebe;
@@ -2688,7 +2688,7 @@ ul.pagination_links li.active_page a {
 	text-align: left;
 }
 .active .pop_menu li a {
-	color: #343434;
+	color: #000000;
 	font-size: 11px;
 	display: block;
 	border-bottom: 1px dashed #bebebe;
@@ -2773,7 +2773,7 @@ a.badge:hover {
 }
 .label-inverse,
 .badge-inverse {
-  background-color: #333333;
+  background-color: #001d57001d57;
 }
 .label-inverse[href],
 .badge-inverse[href] {
